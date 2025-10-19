@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>LocalLibrary</title>
+    <style>
+      body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 2rem; }
+      h1 { margin-bottom: 0.5rem; }
+      ul { line-height: 1.8; }
+      nav a { margin-right: 1rem; }
+    </style>
+  </head>
+  <body>
+    <h1>LocalLibrary Home</h1>
+    <nav>
+      <a href="/catalog/authors/">All authors</a>
+    </nav>
+    <ul>
+      <li>Total books: {{ num_books }}</li>
+      <li>Total copies: {{ num_instances }}</li>
+      <li>Available copies: {{ num_instances_available }}</li>
+      <li>Authors: {{ num_authors }}</li>
+      <li>Genres: {{ num_genres }}</li>
+    </ul>
+    <p>
+      You have visited this page {{ num_visits }} time{{ num_visits|pluralize }}.
+    </p>
+    <p><a href="/admin/">Go to Admin</a></p>
+  </body>
+  </html>
